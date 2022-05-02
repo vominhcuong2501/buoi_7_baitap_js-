@@ -98,3 +98,34 @@ document.getElementById("btnSoNhoNhat").onclick = function() {
     }
     document.getElementById("thongbao5").innerHTML = soChan;
 }
+
+/**
+ * Bài tập 6: Tìm số chẵn cuối cùng trong mảng
+ */
+document.getElementById("btnDoiChoGiaTri").onclick = function() {
+    var number1 = document.getElementById("themGiaTri1").value*1;
+    var number2 = document.getElementById("themGiaTri2").value*1;
+    var result = "";
+    for( var index = 0; index <= arrNumber.length -1; index++) {
+        if(number1 === index || number2 === index) {
+            var giaTri2 = arrNumber[number2]*1;
+            var giaTri1 = arrNumber[number1]*1;
+             arrNumber.splice(number1,1,giaTri2)*1;
+             arrNumber.splice(number2,1,giaTri1)*1;
+            result += arrNumber.splice(arrNumber);
+        }
+    }
+    document.getElementById("thongbao6").innerHTML = result;
+}
+
+/**
+ * Bài tập 7: Sắp xếp mảng theo thứ tự tăng dần
+ */
+ document.getElementById("btnSapXep").onclick = function() { 
+     var result = "";
+     for(var index = 0; index <= arrNumber.length -1; index++) {
+         var giaTri = arrNumber[index]*1;
+        
+     }
+    document.getElementById("thongbao7").innerHTML = result;
+}
