@@ -2,7 +2,7 @@
  * Cho người dùng nhập vào số nguyên và lưu vào trong mảng
  */
 // tự cho mảng
-var arrNumber = [1,-6,22,-18,3,4,-3,45,6,27,8,9,-41,-9];
+var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
 document.getElementById("btnSubmit").onclick = function() {
     // input: giá trị người dùng nhập
     var soNguyen = document.getElementById("nhapSo").value*1;
@@ -100,7 +100,7 @@ document.getElementById("btnSoNhoNhat").onclick = function() {
 }
 
 /**
- * Bài tập 6: Tìm số chẵn cuối cùng trong mảng
+ * Bài tập 6: Bài tập 6: Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị)
  */
 document.getElementById("btnDoiChoGiaTri").onclick = function() {
     var number1 = document.getElementById("themGiaTri1").value*1;
@@ -122,10 +122,62 @@ document.getElementById("btnDoiChoGiaTri").onclick = function() {
  * Bài tập 7: Sắp xếp mảng theo thứ tự tăng dần
  */
  document.getElementById("btnSapXep").onclick = function() { 
-     var result = "";
-     for(var index = 0; index <= arrNumber.length -1; index++) {
-         var giaTri = arrNumber[index]*1;
-        
-     }
+     var result = arrNumber.sort((a,b)=>  a-b);
     document.getElementById("thongbao7").innerHTML = result;
+}
+
+/**
+ * Bài tập 8: Tìm số nguyên tố đầu tiên trong mảng
+ */
+document.querySelector("#btnTimSoNguyenTo").onclick = function() {
+    var soNguyenTo = 0;
+    for(var i = 0; i <= arrNumber.length -1; i++) {
+        if(arrNumber[i]%2 !== 0 || arrNumber[i] === 2 ) {
+            soNguyenTo = arrNumber[i];
+        }
+        break;
+    }
+    document.getElementById("thongbao8").innerHTML = soNguyenTo;
+}
+
+/**
+ * Bài tập 9: Nhập thêm 1 mảng số thực. đếm xem có bao nhiêu số nguyên
+ */
+
+document.querySelector("#btnDemSoNguyen").onclick = function() {
+    var soThuc = [2.3,-60.5,14,-33.2,48,-15.8];
+    var newArrNumber = soThuc.concat(arrNumber);
+    console.log(newArrNumber);
+    var count = 0;
+    for(var i = 0; i <= newArrNumber.length -1; i++) {
+        if(newArrNumber[i]%1 === 0) {
+            count++;
+        }
+    }
+    document.getElementById("thongbao9").innerHTML = count;
+}
+
+/**
+ * Bài tập 10: So sánh số lượng sô dương và số lượng số âm
+ */
+document.querySelector("#btnSoSanh").onclick = function() {
+    var soAm = 0;
+    var soDuong = 0;
+    var ketQua = 0;
+    for(var i = 0; i <= arrNumber.length -1; i++) {
+        if(arrNumber[i] >= 0) {
+            soDuong++;
+        }
+    }
+    for(var i = 0; i <= arrNumber.length -1; i++) {
+        if(arrNumber[i] < 0) {
+            soAm++;
+        }
+    }
+    if(soDuong > soAm) {
+        ketQua = "Số lượng số dương là: " + soDuong + " nhiều hơn số lượng số âm là " + soAm;
+    } else {
+        ketQua = "Số lượng số âm là: " + soAm + " nhiều hơn số lượng số dương là " + soDuong;
+    }
+    document.getElementById("thongbao10").innerHTML = ketQua;
 }
