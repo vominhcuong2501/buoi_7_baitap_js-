@@ -2,9 +2,8 @@
  * Cho người dùng nhập vào số nguyên và lưu vào trong mảng
  */
 // tự cho mảng
-
+var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
 document.getElementById("btnSubmit").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     // input: giá trị người dùng nhập
     var soNguyen = document.getElementById("nhapSo").value*1;
 
@@ -26,7 +25,7 @@ document.getElementById("btnSubmit").onclick = function() {
  * Bài tập 1: Tính tổng số dương truong mảng
  */
 document.getElementById("btnTinhTongSoDuong").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     // output: number
     var result = 0;
     for(var index = 0; index < arrNumber.length; index++) {
@@ -42,7 +41,7 @@ document.getElementById("btnTinhTongSoDuong").onclick = function() {
  * Bài tập 2: Đếm có bao nhiêu số dương trong mảng
  */
  document.getElementById("btnDemSoDuong").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     // output: number
     var result = 0;
     for(var index = 0; index < arrNumber.length; index++) {
@@ -58,7 +57,7 @@ document.getElementById("btnTinhTongSoDuong").onclick = function() {
  * Bài tập 3: Tìm số nhỏ nhất trong mảng
  */
 document.getElementById("btnSoNhoNhat").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     // lính canh
     var min = arrNumber[0];
     for(var index = 0; index < arrNumber.length; index++) {
@@ -74,7 +73,7 @@ document.getElementById("btnSoNhoNhat").onclick = function() {
  * Bài tập 4: Tìm số dương nhỏ nhất trong mảng
  */
  document.getElementById("btnSoDuongNhoNhat").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     // lính canh
     var max = arrNumber[0];
     for(var index = 0; index < arrNumber.length; index++) {
@@ -90,7 +89,7 @@ document.getElementById("btnSoNhoNhat").onclick = function() {
  * Bài tập 5: Tìm số chẵn cuối cùng trong mảng
  */
  document.getElementById("btnSoChanCuoiCung").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     // lính canh
     var soChan = 0;
     for(var index = arrNumber.length -1; index >= 0; index-- ) {
@@ -109,7 +108,7 @@ document.getElementById("btnSoNhoNhat").onclick = function() {
  * Bài tập 6: Bài tập 6: Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị)
  */
 document.getElementById("btnDoiChoGiaTri").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     var number1 = document.getElementById("themGiaTri1").value*1;
     var number2 = document.getElementById("themGiaTri2").value*1;
     var result = "";
@@ -129,7 +128,7 @@ document.getElementById("btnDoiChoGiaTri").onclick = function() {
  * Bài tập 7: Sắp xếp mảng theo thứ tự tăng dần
  */
  document.getElementById("btnSapXep").onclick = function() { 
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
      var result = arrNumber.sort((a,b)=>  a-b);
     document.getElementById("thongbao7").innerHTML = result;
 }
@@ -138,10 +137,10 @@ document.getElementById("btnDoiChoGiaTri").onclick = function() {
  * Bài tập 8: Tìm số nguyên tố đầu tiên trong mảng
  */
 document.querySelector("#btnTimSoNguyenTo").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     var soNguyenTo = 0;
     for(var i = 0; i <= arrNumber.length -1; i++) {
-        if(arrNumber[i]%2 !== 0 || arrNumber[i] === 2 ) {
+        if(arrNumber[i]%2 !== 0 & arrNumber[i] !== 1 || arrNumber[i] === 2 ) {
             soNguyenTo = arrNumber[i];
         }
         break;
@@ -154,7 +153,7 @@ document.querySelector("#btnTimSoNguyenTo").onclick = function() {
  */
 
 document.querySelector("#btnDemSoNguyen").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     var soThuc = [2.3,-60.5,14,-33.2,48,-15.8];
     var newArrNumber = soThuc.concat(arrNumber);
     console.log(newArrNumber);
@@ -171,7 +170,7 @@ document.querySelector("#btnDemSoNguyen").onclick = function() {
  * Bài tập 10: So sánh số lượng sô dương và số lượng số âm
  */
 document.querySelector("#btnSoSanh").onclick = function() {
-    var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
+    // var arrNumber = [1,-6,22,-18,30,4,-3,45,6,27,8,9,-41,-9];
     var soAm = 0;
     var soDuong = 0;
     var ketQua = 0;
